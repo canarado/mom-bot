@@ -1,0 +1,10 @@
+node_modules/
+
+db/
+
+*.env
+
+commands/util/test.js
+
+# until it is finished
+pets/

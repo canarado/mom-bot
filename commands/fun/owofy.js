@@ -1,0 +1,18 @@
+exports.run = (client, message, args) => {
+    let sentence = args.join(' ')
+    if (!sentence) return message.reply('I can\'t owo-fy an empty message! uwu');
+
+    let newSentence = sentence
+    .replace(/[lr]/g, 'w')
+    .replace(/[LR]/g, 'W')
+    message.channel.send(newSentence.embedify())
+}
+
+exports.help = {
+    enabled: true,
+    hideHelp: false,
+    type: "fun",
+    name: "owofy",
+    description: "The `owofy` command takes text and owofies it! Just try it out and you'll get the gist of it.",
+    usage: "owofy <text to put through the owofication process>"
+}
